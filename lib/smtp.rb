@@ -4,7 +4,7 @@ options = { :address              => "smtp.gmail.com",
             :port                 => 465,
             :domain               => 'your.host.name',
             :user_name            => 'cocktail4one@gmail.com',
-            :password             => 'hUv-pyv-QAU-oU4',
+            :password             => '',
             :authentication       => :login,
             :ssl                  => true,
             :openssl_verify_mode  => 'none'
