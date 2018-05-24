@@ -5,24 +5,70 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-ulack': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-ulack': 'reload' %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <style>
+      .search {
+        position: absolute;
+        right: 0px;
+        width: 300px;
+        padding: 10px;
+      }
+      ul.nav {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+      }
+
+      ul.nav li {
+          float: left;
+      }
+
+      ul.nav li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+      ul.nav li a:hover {
+          background-color: #AAA;
+      }
+
+      ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    </style>
 
   </head>
 
   <body>
     <div class="headlines">
 
+
     <table>
-    <tr>
-    <td style="width: 25%;"><%= link_to "Fridges", fridges_path %></td>
-    <td style="width: 25%;"><%= link_to "Foods", foods_path %></td>
-    <td style="width: 25%;"><%= link_to "Users", users_path %></td>
-    <td style="width: 25%;"><%= form_tag(kitchens_path, :method => "get", id: "search-form") do %>
+    <ul class="nav">
+    <li ><%= link_to "Home", home_path %></li>
+    <li ><%= link_to "Fridges", fridges_path %></li>
+    <li ><%= link_to "Foods", foods_path %></li>
+    <li ><%= link_to "Users", users_path %></li>
+    <li ><%= link_to "Contact", contact_path %></li>
+
+    <li style="float:right" class="search"><%= form_tag(kitchens_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-    <%= submit_tag "Search", :name => nil %></td>
-<% end %>
-</tr>
+    <%= submit_tag "Search", :name => nil %></li>
+    <% end %>
+</ul>
 </table>
   </div>
     <%= yield %>

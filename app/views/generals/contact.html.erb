@@ -1,0 +1,11 @@
+<h1>Contact us!</h1>
+
+<%= form_tag email_path(@general), method: :post do %>
+<label for="">Name:</label><br>
+<%= text_field_tag "name" , @name%><br>
+<label for="">Your comment:</label> <br>
+
+<%= text_area_tag 'comment', @comment%> <br>
+<%= submit_tag 'Submit Post' %>
+
+<% end %>

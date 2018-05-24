@@ -12,9 +12,6 @@ class FoodsController < ApplicationController
     @users = User.all
   end
 
-  def root
-
-  end
 
   def show
 

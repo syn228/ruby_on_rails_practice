@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   resources :fridges
   resources :foods
 
-  get '/', to: 'foods#root'
+  get '/', to: 'generals#root', as: "home"
+  get '/contact', to: 'generals#contact', as: "contact"
+
+  post '/generals', to: 'generals#email', as: 'email'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
