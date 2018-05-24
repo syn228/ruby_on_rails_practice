@@ -7,14 +7,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <div class="headlines">
 
-    <%= form_tag(foods_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Foods" %>
-    <%= submit_tag "Search", :name => nil %>
+    <table>
+    <tr>
+    <td style="width: 25%;"><%= link_to "Fridges", fridges_path %></td>
+    <td style="width: 25%;"><%= link_to "Foods", foods_path %></td>
+    <td style="width: 25%;"><%= link_to "Users", users_path %></td>
+    <td style="width: 25%;"><%= form_tag(kitchens_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+    <%= submit_tag "Search", :name => nil %></td>
 <% end %>
+</tr>
+</table>
+  </div>
     <%= yield %>
+
   </body>
 </html>

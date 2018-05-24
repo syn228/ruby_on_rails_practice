@@ -16,12 +16,12 @@ fridge1 = Fridge.create(name: "Mr. Freezie", size: "medium")
 fridge2 = Fridge.create(name: "Ms. Freezie", size: "large")
 fridge3 = Fridge.create(name: "Mr. Freezie Jr.", size: "small")
 
-food1 = Food.create(name: "Curry beef with brown", expires_on: Date.new(2018,2,2), fridge:fridge1)
+food1 = Food.create(name: "Curry beef with brown", expires_on: Date.new(2018,7,2), fridge:fridge1)
 food2 = Food.create(name: "Curry lamb with rice", expires_on: Date.new(2018,8,2), fridge:fridge2)
 food3 = Food.create(name: "Roasted beef with brown rice", expires_on: Date.new(2018,6,2), fridge:fridge3)
 food4 = Food.create(name: "Broccoli and beef with brown rice", expires_on: Date.new(2018,6,2), fridge:fridge1)
 food5 = Food.create(name: "General Tso's chicken with rice", expires_on: Date.new(2018,7,2), fridge:fridge2)
-food6 = Food.create(name: "Caesar salad", expires_on: Date.new(2018,5,10), fridge:fridge1)
+food6 = Food.create(name: "Caesar salad", expires_on: Date.new(2018,7,10), fridge:fridge1)
 
 
 

@@ -1,9 +1,12 @@
-<% if @foods.empty? %>
-  <h4>There are no food containing the term <%= params[:search] %>.</h4>
-<% end %>
+<h1>All FOODS HERE!</h1>
+
+<img src="https://www.simplyrecipes.com/wp-content/uploads/2017/04/2017-05-13-Potato-Broccoli-Curry-4.jpg" width = 20% height = 20%><br>
 
 <% @foods.each do |food| %>
 <%= link_to food.name, food %> | <%= food.expires_on %> <br>
-<% end %>
+<% end %><br>
 
-<%= link_to "create new food", newfood_path %>
+<%= link_to "Create New food", newfood_path %>
+
+<p><%= link_to "All Fridges", fridges_path %></p>
+<p><%= link_to "All Users", users_path %></p>

@@ -1,0 +1,24 @@
+<% if @foods.empty? && @users.empty? && @fridges.empty?%>
+  <h4>Nothing found </h4>
+  <% else %>
+  <ul>
+    
+  <% @foods.each do |food| %>
+  <%= link_to food.name, food %> | <%= food.expires_on %> <br>
+  <% end %>
+  </ul>
+
+    <ul>
+
+    <% @users.each do |user| %>
+    <%= link_to user.name, user %> | <%= user.hunger %> <br>
+    <% end %>
+    </ul>
+
+    <ul>
+      
+    <% @fridges.each do |fridge| %>
+    <%= link_to fridge.name, fridge %> | <%= fridge.size %> <br>
+    <% end %>
+    </ul>
+<% end %>
