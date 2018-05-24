@@ -1,0 +1,12 @@
+<h2>
+<%= @food.name %> |expiration date:
+<%= @food.expires_on  %>
+</h2>
+  <ul>
+    <% @food.users.each do |user| %>
+    <%= link_to user.name, user %> | Hunger? <%= user.hunger %><br>
+    <% end %>
+  </ul>
+
+<h3><%= link_to "Edit", edit_food_path() %></h3>
+<h1><%= link_to "ALL", foods_path %> </h1>

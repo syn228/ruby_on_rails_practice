@@ -1,0 +1,5 @@
+<% @users.each do |user| %>
+<%= link_to user.name, user %> | Crave for food?<%= user.hunger %> <br>
+<% end %>
+
+<%= link_to "create new user", new_user_path %>

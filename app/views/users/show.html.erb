@@ -1,0 +1,24 @@
+<h2>
+<%= @user.name %> |Hunger?:
+<%= @user.hunger  %>
+
+</h2>
+<ul>
+
+<%@user.fridges.each do |fridge| %>
+<%= link_to fridge.name, fridge %>| <%= fridge.size %>
+<ul>
+
+  <% fridge.foods.each do |food| %>
+    <li>
+    <%= link_to food.name, food %>| Expires on:<%= food.expires_on %>
+    </li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+</ul>
+
+
+<h1><%= link_to "ALL", users_path %> </h1>

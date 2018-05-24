@@ -1,0 +1,5 @@
+<% @foods.each do |food| %>
+<%= link_to food.name, food %> | <%= food.expires_on %> <br>
+<% end %>
+
+<%= link_to "create new food", new_food_path %>

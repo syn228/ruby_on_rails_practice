@@ -1,0 +1,24 @@
+<h3>User Form</h3>
+
+<% if flash[:errors] %>
+  <%flash[:errors].each do |error| %>
+  <ul>
+
+    <%=error  %>
+  </ul>
+
+  <% end %>
+<% end %>
+ 
+<%= form_for(@user) do |f| %>
+  <label>User name:</label><br>
+  <%= f.text_field :name %><br>
+ 
+  <label> hunger now?:</label><br>
+  <%= f.check_box :hunger %><br>
+
+  <label>Fridge:</label>
+  <%= f.collection_check_boxes :fridge_ids, @fridges, :id, :name %>
+ 
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,5 @@
+<% @fridges.each do |fridge| %>
+<%= link_to fridge.name, fridge %> | <%= fridge.size %> <br>
+<% end %>
+
+<%= link_to "create new fridge", new_fridge_path %>
