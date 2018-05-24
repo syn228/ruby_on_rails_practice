@@ -22,6 +22,11 @@ class FoodsController < ApplicationController
 
   def index
     @foods = Food.all
+    if params[:search]
+      @foods = Food.search(params[:search]).order("created_at DESC")
+    else
+      @foods = Food.all.order("created_at DESC")
+    end
   end
 
   def create

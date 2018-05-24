@@ -1,5 +1,9 @@
+<% if @foods.empty? %>
+  <h4>There are no food containing the term <%= params[:search] %>.</h4>
+<% end %>
+
 <% @foods.each do |food| %>
 <%= link_to food.name, food %> | <%= food.expires_on %> <br>
 <% end %>
 
-<%= link_to "create new food", new_food_path %>
+<%= link_to "create new food", newfood_path %>

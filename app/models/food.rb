@@ -22,4 +22,8 @@ class Food < ApplicationRecord
   def expiration_date=(date)
     self.expires_on=date
   end
+
+  def self.search(search)
+    where("name LIKE ? OR expires_on LIKE ?", "%#{search}%", "%#{search}%") 
+  end
 end

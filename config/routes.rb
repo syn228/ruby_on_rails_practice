@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/foods/newf', to: 'foods#newf'
+  get '/foods/newf', to: 'foods#newf', as:'newfood'
 
   resources :kitchens
   resources :users
